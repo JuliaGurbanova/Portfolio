@@ -33,7 +33,7 @@ struct AwardsView: View {
                                 .frame(width: 100, height: 100)
                                 .foregroundColor(dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5))
                         }
-                        .accessibilityLabel(dataController.hasEarned(award: award) ? "Unlocked: \(award.name)" : "Locked")
+                        .accessibilityLabel(dataController.hasEarned(award: award) ? "🔓: \(award.name)" : "🔒")
                         .accessibilityHint(award.description)
                     }
                 }
@@ -48,9 +48,9 @@ struct AwardsView: View {
     
     var awardTitle: String {
         if dataController.hasEarned(award: selectedAward) {
-            return "Unlocked: \(selectedAward.name)"
+            return "🔓: \(selectedAward.name)"
         } else {
-            return "Locked"
+            return "🔒"
         }
     }
 }
