@@ -17,6 +17,12 @@
 		C181E1212AC322520019687A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C181E1232AC322520019687A /* Localizable.strings */; };
 		C181E1252AC322CF0019687A /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C181E1272AC322CF0019687A /* Localizable.stringsdict */; };
 		C181E1292AC3412A0019687A /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C181E12B2AC3412A0019687A /* Awards.json */; };
+		C190FC652AC45CF5003D204A /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC642AC45CF5003D204A /* SidebarViewToolbar.swift */; };
+		C190FC672AC45F70003D204A /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC662AC45F70003D204A /* IssueViewToolbar.swift */; };
+		C190FC692AC46024003D204A /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC682AC46024003D204A /* ContentViewToolbar.swift */; };
+		C190FC6B2AC46354003D204A /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC6A2AC46354003D204A /* TagsMenuView.swift */; };
+		C190FC6D2AC4650C003D204A /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC6C2AC4650C003D204A /* SmartFilterRow.swift */; };
+		C190FC6F2AC465F2003D204A /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190FC6E2AC465F2003D204A /* UserFilterRow.swift */; };
 		C1A917892AA76B3700618500 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A917882AA76B3700618500 /* SidebarView.swift */; };
 		C1A9178B2AA76B3D00618500 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9178A2AA76B3D00618500 /* DetailView.swift */; };
 		C1A9178D2AA76EB800618500 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9178C2AA76EB800618500 /* Filter.swift */; };
@@ -44,6 +50,12 @@
 		C181E1282AC322D60019687A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		C181E12A2AC3412A0019687A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		C181E12C2AC341330019687A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/Awards.json; sourceTree = "<group>"; };
+		C190FC642AC45CF5003D204A /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		C190FC662AC45F70003D204A /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		C190FC682AC46024003D204A /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		C190FC6A2AC46354003D204A /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		C190FC6C2AC4650C003D204A /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		C190FC6E2AC465F2003D204A /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		C1A917872AA632A600618500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C1A917882AA76B3700618500 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		C1A9178A2AA76B3D00618500 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -96,10 +108,16 @@
 				C1A9178C2AA76EB800618500 /* Filter.swift */,
 				C1B75E8B2A97A8E000299F51 /* DataController.swift */,
 				C1B75E7B2A97A2D300299F51 /* ContentView.swift */,
+				C190FC682AC46024003D204A /* ContentViewToolbar.swift */,
 				C1A917882AA76B3700618500 /* SidebarView.swift */,
+				C190FC642AC45CF5003D204A /* SidebarViewToolbar.swift */,
+				C190FC6E2AC465F2003D204A /* UserFilterRow.swift */,
+				C190FC6C2AC4650C003D204A /* SmartFilterRow.swift */,
 				C1A9178A2AA76B3D00618500 /* DetailView.swift */,
 				C1446FE52AB0A39700389192 /* IssueRow.swift */,
 				C1446FE72AB0AD4F00389192 /* IssueView.swift */,
+				C190FC6A2AC46354003D204A /* TagsMenuView.swift */,
+				C190FC662AC45F70003D204A /* IssueViewToolbar.swift */,
 				C1446FE92AB0AD5A00389192 /* NoIssueView.swift */,
 				C101690C2ABB577E002AD2C3 /* Award.swift */,
 				C101690E2ABB5829002AD2C3 /* AwardsView.swift */,
@@ -201,7 +219,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1A9178D2AA76EB800618500 /* Filter.swift in Sources */,
+				C190FC6B2AC46354003D204A /* TagsMenuView.swift in Sources */,
 				C101690D2ABB577E002AD2C3 /* Award.swift in Sources */,
+				C190FC672AC45F70003D204A /* IssueViewToolbar.swift in Sources */,
+				C190FC6D2AC4650C003D204A /* SmartFilterRow.swift in Sources */,
 				C101690F2ABB5829002AD2C3 /* AwardsView.swift in Sources */,
 				C1A917912AA8B9D800618500 /* Tag-CoreDataHelpers.swift in Sources */,
 				C1B75E8A2A97A3C400299F51 /* Main.xcdatamodeld in Sources */,
@@ -209,9 +230,12 @@
 				C10169072ABB41D1002AD2C3 /* Bundle-Decodable.swift in Sources */,
 				C1A9178B2AA76B3D00618500 /* DetailView.swift in Sources */,
 				C1B75E8C2A97A8E000299F51 /* DataController.swift in Sources */,
+				C190FC692AC46024003D204A /* ContentViewToolbar.swift in Sources */,
 				C1A917892AA76B3700618500 /* SidebarView.swift in Sources */,
 				C1B75E7C2A97A2D300299F51 /* ContentView.swift in Sources */,
+				C190FC652AC45CF5003D204A /* SidebarViewToolbar.swift in Sources */,
 				C1446FE82AB0AD4F00389192 /* IssueView.swift in Sources */,
+				C190FC6F2AC465F2003D204A /* UserFilterRow.swift in Sources */,
 				C1446FEA2AB0AD5A00389192 /* NoIssueView.swift in Sources */,
 				C1446FE62AB0A39700389192 /* IssueRow.swift in Sources */,
 				C1B75E7A2A97A2D300299F51 /* PortfolioApp.swift in Sources */,
