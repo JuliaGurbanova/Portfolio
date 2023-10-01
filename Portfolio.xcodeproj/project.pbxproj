@@ -116,8 +116,8 @@
 				C1A9178A2AA76B3D00618500 /* DetailView.swift */,
 				C1446FE52AB0A39700389192 /* IssueRow.swift */,
 				C1446FE72AB0AD4F00389192 /* IssueView.swift */,
-				C190FC6A2AC46354003D204A /* TagsMenuView.swift */,
 				C190FC662AC45F70003D204A /* IssueViewToolbar.swift */,
+				C190FC6A2AC46354003D204A /* TagsMenuView.swift */,
 				C1446FE92AB0AD5A00389192 /* NoIssueView.swift */,
 				C101690C2ABB577E002AD2C3 /* Award.swift */,
 				C101690E2ABB5829002AD2C3 /* AwardsView.swift */,
@@ -153,6 +153,7 @@
 				C1B75E722A97A2D300299F51 /* Sources */,
 				C1B75E732A97A2D300299F51 /* Frameworks */,
 				C1B75E742A97A2D300299F51 /* Resources */,
+				C10434A52AC89FE5000D0F9D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -212,6 +213,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C10434A52AC89FE5000D0F9D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1B75E722A97A2D300299F51 /* Sources */ = {

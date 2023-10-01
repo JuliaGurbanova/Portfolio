@@ -11,7 +11,7 @@ import SwiftUI
 struct PortfolioApp: App {
     @StateObject var dataController = DataController()
     @Environment(\.scenePhase) var scenePhase
-    
+
     var body: some Scene {
         WindowGroup {
             NavigationSplitView {
