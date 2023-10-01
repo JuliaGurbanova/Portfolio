@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A struct representing a filter for organizing and categorizing issues.
 struct Filter: Identifiable, Hashable {
     var id: UUID
     var name: String
