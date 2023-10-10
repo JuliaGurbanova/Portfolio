@@ -32,10 +32,11 @@ extension Issue {
     }
 
     var issueTagsList: String {
-        guard let tags else { return "No tags" }
+        let noTags = NSLocalizedString("No tags", comment: "No tags have been attached.")
+        guard let tags else { return noTags }
 
         if tags.count == 0 {
-            return "No tags"
+            return noTags
         } else {
             return issueTags.map(\.tagName).formatted()
         }
@@ -47,10 +48,6 @@ extension Issue {
         } else {
             return NSLocalizedString("Open", comment: "Open")
         }
-    }
-
-    var issueFormattedCreationDate: String {
-        issueCreationDate.formatted(date: .numeric, time: .omitted)
     }
 
     static var example: Issue {
