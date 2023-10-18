@@ -13,6 +13,7 @@
 		C101690F2ABB5829002AD2C3 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101690E2ABB5829002AD2C3 /* AwardsView.swift */; };
 		C11133902AD54CB600D0AA77 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111338F2AD54CB600D0AA77 /* ContentViewModel.swift */; };
 		C11133922AD54EFB00D0AA77 /* IssueRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11133912AD54EFB00D0AA77 /* IssueRowViewModel.swift */; };
+		C11ADEB52AE04585009CE94D /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ADEB42AE04585009CE94D /* DataController-Notifications.swift */; };
 		C11EFB502ACDAEB00064DEA3 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11EFB4F2ACDAEB00064DEA3 /* ExtensionTests.swift */; };
 		C11EFB532ACDBB920064DEA3 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = C11EFB522ACDBB920064DEA3 /* DecodableDictionary.json */; };
 		C11EFB552ACDBBC40064DEA3 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = C11EFB542ACDBBC40064DEA3 /* DecodableString.json */; };
@@ -74,6 +75,7 @@
 		C101690E2ABB5829002AD2C3 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		C111338F2AD54CB600D0AA77 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		C11133912AD54EFB00D0AA77 /* IssueRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowViewModel.swift; sourceTree = "<group>"; };
+		C11ADEB42AE04585009CE94D /* DataController-Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Notifications.swift"; sourceTree = "<group>"; };
 		C11EFB4F2ACDAEB00064DEA3 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		C11EFB522ACDBB920064DEA3 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		C11EFB542ACDBBC40064DEA3 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				C1B75E792A97A2D300299F51 /* PortfolioApp.swift */,
 				C1B75E8B2A97A8E000299F51 /* DataController.swift */,
+				C11ADEB42AE04585009CE94D /* DataController-Notifications.swift */,
 				C1A714A42ACB18F50048C881 /* Filters */,
 				C1A714A52ACB18FB0048C881 /* IIssues */,
 				C1A714A62ACB19040048C881 /* Editing */,
@@ -489,6 +492,7 @@
 				C190FC672AC45F70003D204A /* IssueViewToolbar.swift in Sources */,
 				C190FC6D2AC4650C003D204A /* SmartFilterRow.swift in Sources */,
 				C101690F2ABB5829002AD2C3 /* AwardsView.swift in Sources */,
+				C11ADEB52AE04585009CE94D /* DataController-Notifications.swift in Sources */,
 				C1A917912AA8B9D800618500 /* Tag-CoreDataHelpers.swift in Sources */,
 				C1B75E8A2A97A3C400299F51 /* Main.xcdatamodeld in Sources */,
 				C1A9178F2AA8B5AE00618500 /* Issue-CoreDataHelpers.swift in Sources */,
