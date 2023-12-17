@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import StoreKit
 import SwiftUI
 
 enum SortType: String {
@@ -38,7 +39,14 @@ class DataController: ObservableObject {
     @Published var sortType = SortType.dateCreated
     @Published var sortNewestFirst = true
 
+    private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
+
+    /// The UserDefaults suite where we're saving user data.
+    let defaults: UserDefaults
+
+    /// The StoreKit products we've loaded for the store.
+    @Published var products = [Product]()
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -78,8 +86,14 @@ class DataController: ObservableObject {
     ///
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary memory or not.
-    init(inMemory: Bool = false) {
+    /// - Parameter defaults: The UserDefaults suite where user data should be stored.
+    init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
+
+        storeTask = Task {
+            await monitorTransactions()
+        }
 
         // For testing and previewing purposes, we create a temporary,
         // in-memory database by writing to /dev/null
@@ -272,11 +286,24 @@ class DataController: ObservableObject {
         return allIssues
     }
 
-    func newTag() {
+    /// Checks the current unlock status, and whether there are at least 3 tags.
+    /// If the app is unlocked, adds the tag, otherwise returns false if there are 3 tags already.
+    func newTag() -> Bool {
+        var shouldCreate = fullVersionUnlocked
+
+        if shouldCreate == false {
+            shouldCreate = count(for: Tag.fetchRequest()) < 3
+        }
+
+        guard shouldCreate else {
+            return false
+        }
+
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
         save()
+        return true
     }
 
     func newIssue() {
@@ -320,6 +347,9 @@ class DataController: ObservableObject {
             let fetchRequest = Tag.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
+
+        case "unlock":
+            return fullVersionUnlocked
 
         default:
             // an unknown award criterion; this should never be allowed

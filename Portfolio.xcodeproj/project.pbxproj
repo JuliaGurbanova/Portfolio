@@ -22,6 +22,8 @@
 		C1446FE62AB0A39700389192 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1446FE52AB0A39700389192 /* IssueRow.swift */; };
 		C1446FE82AB0AD4F00389192 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1446FE72AB0AD4F00389192 /* IssueView.swift */; };
 		C1446FEA2AB0AD5A00389192 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1446FE92AB0AD5A00389192 /* NoIssueView.swift */; };
+		C17292202B123B32004295AC /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172921F2B123B32004295AC /* DataController-StoreKit.swift */; };
+		C17292232B124B67004295AC /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17292222B124B67004295AC /* StoreView.swift */; };
 		C17A04A52ACDDC920037C0B1 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A04A42ACDDC920037C0B1 /* PerformanceTests.swift */; };
 		C17A04AD2ACDE4CB0037C0B1 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A04AC2ACDE4CB0037C0B1 /* PortfolioUITests.swift */; };
 		C17A04AF2ACDE4CB0037C0B1 /* PortfolioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A04AE2ACDE4CB0037C0B1 /* PortfolioUITestsLaunchTests.swift */; };
@@ -84,6 +86,9 @@
 		C1446FE52AB0A39700389192 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		C1446FE72AB0AD4F00389192 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		C1446FE92AB0AD5A00389192 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
+		C172921E2B123911004295AC /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		C172921F2B123B32004295AC /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
+		C17292222B124B67004295AC /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		C17A04A42ACDDC920037C0B1 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		C17A04AA2ACDE4CA0037C0B1 /* PortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17A04AC2ACDE4CB0037C0B1 /* PortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUITests.swift; sourceTree = "<group>"; };
@@ -155,6 +160,14 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		C17292212B124B50004295AC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C17292222B124B67004295AC /* StoreView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		C17A04AB2ACDE4CA0037C0B1 /* PortfolioUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +201,7 @@
 			children = (
 				C1A917872AA632A600618500 /* Info.plist */,
 				C1B75E882A97A3C400299F51 /* Main.xcdatamodeld */,
+				C172921E2B123911004295AC /* Configuration.storekit */,
 				C1B75E7F2A97A2D300299F51 /* Portfolio.entitlements */,
 			);
 			path = Configuration;
@@ -281,7 +295,9 @@
 				C1B75E792A97A2D300299F51 /* PortfolioApp.swift */,
 				C1B75E8B2A97A8E000299F51 /* DataController.swift */,
 				C11ADEB42AE04585009CE94D /* DataController-Notifications.swift */,
+				C172921F2B123B32004295AC /* DataController-StoreKit.swift */,
 				C1A714A42ACB18F50048C881 /* Filters */,
+				C17292212B124B50004295AC /* Store */,
 				C1A714A52ACB18FB0048C881 /* IIssues */,
 				C1A714A62ACB19040048C881 /* Editing */,
 				C1A714A72ACB190C0048C881 /* Awards */,
@@ -492,6 +508,7 @@
 				C190FC672AC45F70003D204A /* IssueViewToolbar.swift in Sources */,
 				C190FC6D2AC4650C003D204A /* SmartFilterRow.swift in Sources */,
 				C101690F2ABB5829002AD2C3 /* AwardsView.swift in Sources */,
+				C17292202B123B32004295AC /* DataController-StoreKit.swift in Sources */,
 				C11ADEB52AE04585009CE94D /* DataController-Notifications.swift in Sources */,
 				C1A917912AA8B9D800618500 /* Tag-CoreDataHelpers.swift in Sources */,
 				C1B75E8A2A97A3C400299F51 /* Main.xcdatamodeld in Sources */,
@@ -510,6 +527,7 @@
 				C1446FEA2AB0AD5A00389192 /* NoIssueView.swift in Sources */,
 				C1446FE62AB0A39700389192 /* IssueRow.swift in Sources */,
 				C1B75E7A2A97A2D300299F51 /* PortfolioApp.swift in Sources */,
+				C17292232B124B67004295AC /* StoreView.swift in Sources */,
 				C11133922AD54EFB00D0AA77 /* IssueRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -791,7 +809,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -830,7 +848,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
