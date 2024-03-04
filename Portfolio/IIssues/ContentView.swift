@@ -11,6 +11,8 @@ struct ContentView: View {
     @Environment(\.requestReview) var requestReview
     @StateObject var viewModel: ViewModel
 
+    private let newIssueActivity = "me.gurbanova.julia.Portfolio.newIssue"
+
     var body: some View {
         List(selection: $viewModel.selectedIssue) {
             ForEach(viewModel.dataController.issuesForSelectedFilter()) { issue in
@@ -30,6 +32,11 @@ struct ContentView: View {
         .toolbar(content: ContentViewToolbar.init)
         .onAppear(perform: askForReview)
         .onOpenURL(perform: openURL)
+        .userActivity(newIssueActivity) { activity in
+            activity.isEligibleForPrediction = true
+            activity.title = "New Issue"
+        }
+        .onContinueUserActivity(newIssueActivity, perform: resumeActivity)
     }
 
     init(dataController: DataController) {
@@ -47,6 +54,10 @@ struct ContentView: View {
         if url.absoluteString.contains("newIssue") {
             viewModel.dataController.newIssue()
         }
+    }
+
+    func resumeActivity(_ userActivity: NSUserActivity) {
+        viewModel.dataController.newIssue()
     }
 }
 
