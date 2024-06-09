@@ -72,7 +72,7 @@ struct ComplexPortfolioWidgetEntryView: View {
                     VStack(alignment: .leading) {
                         Text(issue.issueTitle)
                             .font(.headline)
-                        
+
                         if issue.issueTags.isEmpty == false {
                             Text(issue.issueTagsList)
                                 .foregroundStyle(.secondary)
