@@ -50,10 +50,12 @@
 		C1B75E822A97A2D300299F51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B75E812A97A2D300299F51 /* Preview Assets.xcassets */; };
 		C1B75E8A2A97A3C400299F51 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B75E882A97A3C400299F51 /* Main.xcdatamodeld */; };
 		C1B75E8C2A97A8E000299F51 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B75E8B2A97A8E000299F51 /* DataController.swift */; };
+		C1B9ADAA2BF5307A004655D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C181E1232AC322520019687A /* Localizable.strings */; };
+		C1B9ADAC2BF53192004655D9 /* ComplexPortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B9ADAB2BF53192004655D9 /* ComplexPortfolioWidget.swift */; };
 		C1BBB7AF2BACB28100DA8148 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BBB7AE2BACB28100DA8148 /* WidgetKit.framework */; };
 		C1BBB7B12BACB28100DA8148 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BBB7B02BACB28100DA8148 /* SwiftUI.framework */; };
 		C1BBB7B42BACB28100DA8148 /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBB7B32BACB28100DA8148 /* PortfolioWidgetBundle.swift */; };
-		C1BBB7B62BACB28100DA8148 /* PortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBB7B52BACB28100DA8148 /* PortfolioWidget.swift */; };
+		C1BBB7B62BACB28100DA8148 /* SimplePortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BBB7B52BACB28100DA8148 /* SimplePortfolioWidget.swift */; };
 		C1BBB7B82BACB28200DA8148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BBB7B72BACB28200DA8148 /* Assets.xcassets */; };
 		C1BBB7BC2BACB28200DA8148 /* PortfolioWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C1BBB7AC2BACB28100DA8148 /* PortfolioWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C1BBB7C12BACB3A200DA8148 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B75E882A97A3C400299F51 /* Main.xcdatamodeld */; };
@@ -159,11 +161,12 @@
 		C1B75E812A97A2D300299F51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1B75E892A97A3C400299F51 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		C1B75E8B2A97A8E000299F51 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C1B9ADAB2BF53192004655D9 /* ComplexPortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexPortfolioWidget.swift; sourceTree = "<group>"; };
 		C1BBB7AC2BACB28100DA8148 /* PortfolioWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PortfolioWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BBB7AE2BACB28100DA8148 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C1BBB7B02BACB28100DA8148 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		C1BBB7B32BACB28100DA8148 /* PortfolioWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetBundle.swift; sourceTree = "<group>"; };
-		C1BBB7B52BACB28100DA8148 /* PortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidget.swift; sourceTree = "<group>"; };
+		C1BBB7B52BACB28100DA8148 /* SimplePortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePortfolioWidget.swift; sourceTree = "<group>"; };
 		C1BBB7B72BACB28200DA8148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1BBB7B92BACB28200DA8148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1BBB7C92BACB5B800DA8148 /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
@@ -392,7 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				C1BBB7B32BACB28100DA8148 /* PortfolioWidgetBundle.swift */,
-				C1BBB7B52BACB28100DA8148 /* PortfolioWidget.swift */,
+				C1BBB7B52BACB28100DA8148 /* SimplePortfolioWidget.swift */,
+				C1B9ADAB2BF53192004655D9 /* ComplexPortfolioWidget.swift */,
 				C1BBB7B72BACB28200DA8148 /* Assets.xcassets */,
 				C1BBB7B92BACB28200DA8148 /* Info.plist */,
 			);
@@ -569,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BBB7B82BACB28200DA8148 /* Assets.xcassets in Resources */,
+				C1B9ADAA2BF5307A004655D9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,8 +672,9 @@
 				C1BBB7C12BACB3A200DA8148 /* Main.xcdatamodeld in Sources */,
 				C1BBB7C82BACB4BC00DA8148 /* DataController-StoreKit.swift in Sources */,
 				C1BBB7C22BACB3C500DA8148 /* DataController.swift in Sources */,
-				C1BBB7B62BACB28100DA8148 /* PortfolioWidget.swift in Sources */,
+				C1BBB7B62BACB28100DA8148 /* SimplePortfolioWidget.swift in Sources */,
 				C1BBB7B42BACB28100DA8148 /* PortfolioWidgetBundle.swift in Sources */,
+				C1B9ADAC2BF53192004655D9 /* ComplexPortfolioWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
