@@ -40,6 +40,7 @@ extension DataController {
         }
     }
 
+    #if !os(visionOS)
     /// Triggers the purchase flow.
     /// If purchasing the product was a success, reads the transaction out,
     /// and sends it onto the finalize() method to handle content unlocking.
@@ -50,6 +51,7 @@ extension DataController {
             try await finalize(validation.payloadValue)
         }
     }
+    #endif
 
     /// Handles the transactions, unlocks content, and handles refunds.
     @MainActor
