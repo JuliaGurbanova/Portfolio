@@ -109,6 +109,7 @@
     },
     "ADD SAMPLES" : {
       "comment" : "DEBUG ONLY",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
